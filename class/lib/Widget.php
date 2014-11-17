@@ -156,4 +156,13 @@ class Widget{
         $this->DOM_ELEMENT->appendChild($elemento->toElement());
     }
     
+    /**
+     * Clonando Elemento
+     * @return Widget Retorna Widget do elemento especifico como clone
+     */
+    public function getClone(){
+        return $this->DOM_ELEMENT->cloneNode();
+    }
+    
+    
 }
