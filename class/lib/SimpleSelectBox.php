@@ -124,14 +124,7 @@ class SimpleSelectBox extends Widget {
         return $option->length;
     }
     
-    /**
-     * Adiciona um novo campo no Selectbox
-     * @param Widget $element Elemento do tipo Widget
-     */
-    public function addElement($element){
-        
-        $this->DOM_ELEMENT->appendChild($element->toElement());
-    }
+    
     
     
     

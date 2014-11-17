@@ -148,4 +148,12 @@ class Widget{
         $this->DOM_ELEMENT->nodeValue = $value;
     }
     
+    /**
+     * Adiciona Elemento
+     * @param Widget $elemento Elemento Widget
+     */
+    public function addElement($elemento){
+        $this->DOM_ELEMENT->appendChild($element->toElement());
+    }
+    
 }

@@ -117,14 +117,7 @@ class SimpleForm {
         $this->setAttr('name',$name);
     }
     
-    /**
-     * Adiciona um novo campo no formulario
-     * @param Widget $element Elemento do tipo Widget
-     */
-    public function addElement($element){
-        
-        $this->DOM_ELEMENT->appendChild($element->toElement());
-    }
+  
     
     
 }

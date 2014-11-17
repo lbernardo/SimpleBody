@@ -27,14 +27,7 @@ class SimpleDiv extends Widget {
     }
     
     
-    /**
-     * Insere novo elemento na DIV
-     * @param Widget $elemento Elemento para inserir na  div
-     */
-    public function addElement(Widget $element){
-        $this->DOM_ELEMENT->appendChild($element->toElement());
-    }
-    
+   
     /**
      * Carrega div de uma template
      * @param string $path Caminho do elemento da DIV
