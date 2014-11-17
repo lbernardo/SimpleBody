@@ -153,7 +153,7 @@ class Widget{
      * @param Widget $elemento Elemento Widget
      */
     public function addElement($elemento){
-        $this->DOM_ELEMENT->appendChild($element->toElement());
+        $this->DOM_ELEMENT->appendChild($elemento->toElement());
     }
     
 }
