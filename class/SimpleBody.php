@@ -61,6 +61,9 @@ class SimpleBody {
             case 'select':
                 return new SimpleSelectBox($ele,$this->DOM);
             break;
+            case 'div':
+                return new SimpleDiv($ele,$this->DOM);
+            break;
         }
     }
     
