@@ -161,7 +161,8 @@ class Widget{
      * @return Widget Retorna Widget do elemento especifico como clone
      */
     public function getClone(){
-        return $this->DOM_ELEMENT->cloneNode();
+        $elemento = new Widget($this->DOM_ELEMENT->cloneNode());
+        return $elemento;
     }
     
     
