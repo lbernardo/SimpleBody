@@ -88,5 +88,82 @@ class SimpleBody {
         return $this->DOM->saveHTML();
     }
     
+    /**
+     * Retorna titulo da pagina
+     * @return string Título da Página
+     */
+    public function getTitle(){
+        // Seleciona elemento
+        $title = $this->DOM->getElementsByTagName("title");
+        $title = $title->item(0);
+        return $title->nodeValue;
+    }
+    
+    /**
+     * Seta novo titulo da página
+     * @param string $text Título da Página
+     */
+    public function setTitle($text = null){
+        $title = $this->DOM->getElementsByTagName("title");
+        $title = $title->item(0); 
+        // Verifica se já existe titulo na pagina
+        if($title==NULL){ // Caso não
+            // Lê cabeçalho
+            $head = $this->getHead();
+            // Cria titulo
+            $title = $this->DOM->createElement("title");
+            // Adiciona no titulo
+            $head->appendChild($title);
+        }
+        // Seta novo titulo
+        $title->nodeValue = $text;
+    }
+    
+    /**
+     * Seta novo style na página
+     * @param string $src Caminho do Style
+     * @param string $type Tipo de arquivo
+     */
+    public function setStyle($src = null,$type = 'text/css'){
+        // Lê cabeçalho
+        $head = $this->getHead();
+        // Cria novo Style
+        $style = $this->DOM->createElement("style");
+        // Seta o tipo do estilo
+        $style->setAttribute("type",$type);
+        // Seta o caminho 
+        $style->setAttribute("href",$src);
+        // Adiciona estilo no cabeçalho
+        $head->appendChild($style);
+    }
+    
+    /**
+     * Seta novo script na página
+     * @param string $src Caminho do Script
+     * @param string $type Tipo de arquivo
+     */
+    public function setScript($src = null,$type = 'text/javascript'){
+        // Lê cabeçalho
+        $head = $this->getHead();
+        // Cria novo script
+        $style = $this->DOM->createElement("script");
+        // Seta o tipo do arquivo
+        $style->setAttribute("type",$type);
+        // Seta o caminho 
+        $style->setAttribute("src",$src);
+        // Adiciona script no cabeçalho
+        $head->appendChild($style);
+    }
+    
+    /**
+     * Método interno para retorna elemento head
+     * @return DOMElement Retorna head
+     */
+    private function getHead(){
+        $head = $this->DOM->getElementsByTagName("head");
+        $head = $head->item(0);
+        return $head;
+    }
+    
 }
 ?>
