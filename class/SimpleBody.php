@@ -64,6 +64,8 @@ class SimpleBody {
             case 'div':
                 return new SimpleDiv($ele,$this->DOM);
             break;
+            default :
+                return new Widget($ele);
         }
     }
     
