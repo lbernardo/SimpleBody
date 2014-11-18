@@ -69,7 +69,9 @@ class SimpleBody {
      * @param Widget $elemento Elemento para inserir no corpo
      */
     public function addElement(Widget $element){
-        $this->DOM->appendChild($element->toElement());
+        $body  = $this->DOM->getElementsByTagName("body");
+        $body = $body->item(0);
+        $body->appendChild($element->toElement());
     }
     
    /**
