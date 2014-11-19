@@ -67,6 +67,9 @@ class SimpleBody {
             case 'img':
                 return new SimpleImage($ele,$this->DOM);
             break;
+            case 'button':
+                return new SimpleButton($ele, $this->DOM);
+            break;
             default :
                 return new Widget($ele);
         }

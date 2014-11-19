@@ -1,7 +1,6 @@
 Criar:
     class/lib/SimpleList => Lista (ul)
     class/lib/SimpleTable => Tabelas (table)*
-    class/lib/SimpleButton => Botões (button)
     class/lib/SimpleRadioGroup => Grupo de Radios (input[type='radio'])
     class/lib/SimpleHeading => Cabeçalhos (H1,H2,... Hn)
     class/lib/SimpleText => Textos (b,i,sub,strong,em,sup,p,span)
