@@ -138,7 +138,12 @@ class Widget{
      * @return string HTML do Widget
      */
     public function getHTML(){
-        return $this->DOM_ELEMENT->nodeValue;
+        $elemento = $this->DOM_ELEMENT->childNodes;
+        $innerHTML = null;
+        foreach($elemento as $child){
+            $innerHTML .= $this->DOM_ELEMENT->ownerDocument->saveHTML($child);
+        }
+        return $innerHTML;
     }
     /**
      * seta HTML
