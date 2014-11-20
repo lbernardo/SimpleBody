@@ -70,6 +70,9 @@ class SimpleBody {
             case 'button':
                 return new SimpleButton($ele, $this->DOM);
             break;
+            case 'table':
+                return new SimpleTable($ele, $this->DOM);
+            break;
             default :
                 return new Widget($ele);
         }
