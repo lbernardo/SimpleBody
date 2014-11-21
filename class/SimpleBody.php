@@ -12,13 +12,14 @@ class SimpleBody {
     var $PATH_LIB;
     var $DOM;
     var $TEMPLATE;
-    
+    var $PATH_MODELS;
     
     public function __construct() {
         $this->PATH = dirname(__FILE__);
         $this->PATH_TEMPLATES = $this->PATH."/templates";
         $this->PATH_COMPILE = $this->PATH."/templates_c";
         $this->PATH_LIB = $this->PATH_LIB."/lib";
+        $this->PATH_MODELS = $this->PATH."/models";
     }
     
     
@@ -180,6 +181,13 @@ class SimpleBody {
         $head = $head->item(0);
         return $head;
     }
+    
+    public function getModels($model = null){
+        $tmp = new DOMDocument;
+        $tmp->load($this->PATH_MODELS."/".$model);
+        $this->DOM->importNode($tmp);
+    }
+    
     
 }
 ?>
