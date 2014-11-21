@@ -4,7 +4,7 @@
  * Widget para Formularios
  * @author lucas
  */
-class SimpleForm {
+class SimpleForm extends Widget{
     
     const TAG_NAME = 'form';
     
@@ -20,9 +20,9 @@ class SimpleForm {
     const PARENT = '_parent';
     const TOP = '_top';
     
-    public function SimpleForm($element,$DOM) {
+    public function SimpleForm($element) {
         $this->DOM_ELEMENT = $element;
-        $this->DOM = $DOM;
+        $this->DOM = $element->ownerDocument;
     }
     
     /**

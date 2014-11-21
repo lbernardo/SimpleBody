@@ -9,9 +9,9 @@ class SimpleDiv extends Widget {
 
     const TAG_NAME = 'div';
     
-    public function SimpleDiv($element,$DOM) {
+    public function SimpleDiv($element) {
         $this->DOM_ELEMENT = $element;
-        $this->DOM = $DOM;
+        $this->DOM = $element->ownerDocument;
     }
     
     

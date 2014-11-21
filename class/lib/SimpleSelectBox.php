@@ -8,9 +8,9 @@ class SimpleSelectBox extends Widget {
 
     const TAG_NAME = 'select';
     
-    public function SimpleSelectBox($element,$DOM) {
+    public function SimpleSelectBox($element) {
         $this->DOM_ELEMENT = $element;
-        $this->DOM = $DOM;
+        $this->DOM = $element->ownerDocument;
     }
     
     

@@ -13,9 +13,9 @@ class SimpleInput extends Widget{
     const CHECK = 'checkbox';
     const FILE = 'file';
     
-    public function SimpleInput($element,$DOM) {
+    public function SimpleInput($element) {
         $this->DOM_ELEMENT = $element;
-        $this->DOM = $DOM;
+        $this->DOM = $element->ownerDocument;
     }
     
     /**

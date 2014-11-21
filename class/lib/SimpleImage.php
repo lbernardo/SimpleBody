@@ -6,9 +6,9 @@
  */
 class SimpleImage extends Widget{
     
-    public function SimpleForm($element,$DOM) {
+    public function SimpleForm($element) {
         $this->DOM_ELEMENT = $element;
-        $this->DOM = $DOM;
+        $this->DOM = $element->ownerDocument;
     }
     
     /**

@@ -50,28 +50,28 @@ class SimpleBody {
         
         switch ($ele->tagName){
             case 'input':
-                return new SimpleInput($ele,$this->DOM);
+                return new SimpleInput($ele);
             break;
             case 'form':
-                return new SimpleForm($ele,$this->DOM);
+                return new SimpleForm($ele);
             break;
             case 'a':
-                return new SimpleLink($ele,$this->DOM);
+                return new SimpleLink($ele);
             break;
             case 'select':
-                return new SimpleSelectBox($ele,$this->DOM);
+                return new SimpleSelectBox($ele);
             break;
             case 'div':
-                return new SimpleDiv($ele,$this->DOM);
+                return new SimpleDiv($ele);
             break;
             case 'img':
-                return new SimpleImage($ele,$this->DOM);
+                return new SimpleImage($ele);
             break;
             case 'button':
-                return new SimpleButton($ele, $this->DOM);
+                return new SimpleButton($ele);
             break;
             case 'table':
-                return new SimpleTable($ele, $this->DOM);
+                return new SimpleTable($ele);
             break;
             default :
                 return new Widget($ele);

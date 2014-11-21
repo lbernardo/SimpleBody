@@ -11,9 +11,9 @@ class SimpleButton extends Widget{
     const RESET = 'reset';
     
     
-    public function SimpleButton($element,$DOM){
+    public function SimpleButton($element){
         $this->DOM_ELEMENT = $element;
-        $this->DOM = $DOM;
+        $this->DOM = $element->ownerDocument;
     }
     
     

@@ -7,9 +7,9 @@ class SimpleTable extends Widget{
     
     const TAG_NAME = 'table';
     
-    public function SimpleTable($elemento,$DOM){
-        $this->DOM_ELEMENT = $elemento;
-        $this->DOM = $DOM;
+    public function SimpleTable($element){
+        $this->DOM_ELEMENT = $element;
+        $this->DOM = $element->ownerDocument;
     }
     
     
