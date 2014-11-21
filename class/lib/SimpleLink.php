@@ -8,9 +8,9 @@ class SimpleLink extends Widget{
     
     const TAG_NAME = 'a';
     
-    public function SimpleLink($element,$DOM) {
+    public function SimpleLink($element) {
         $this->DOM_ELEMENT = $element;
-        $this->DOM = $DOM;
+        $this->DOM = $element->ownerDocument;
     }
     
     /**
