@@ -228,6 +228,20 @@ class SimpleBody {
         return new Widget($elemento);
     }
     
+    /**
+     * Importa modelo
+     * @param string $model Nome do modelo
+     * @param string $id div do modelo
+     */
+    public function importModel($model,$id){
+        // Tmp modelo
+        $tmp = new DOMDocument;
+        $tmp->loadHTMLFile($this->PATH_MODELS."/".$model);
+        $elemento = $tmp->getElementById($id);
+        $elemento = $this->DOM->importNode($elemento,true);
+        return $elemento;
+    }
+    
     
 }
 ?>
