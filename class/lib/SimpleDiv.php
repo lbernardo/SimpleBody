@@ -13,8 +13,7 @@ class SimpleDiv extends Widget {
         $this->DOM_ELEMENT = $element;
         $this->DOM = $element->ownerDocument;
     }
-    
-    
+        
     /**
      * Cria Widget::SimpleDiv do elemento a partir da classe
      * @param string $id Id do novo elemento
@@ -25,5 +24,5 @@ class SimpleDiv extends Widget {
         $elemento->setAttribute('id',$id);
         return new SimpleDiv($elemento);
     }
-    
+
 }
