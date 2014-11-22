@@ -22,7 +22,7 @@ class SimpleTextarea extends Widget {
     public static function CreateElement($id = null, $Body = null) {
         $elemento = $Body->DOM->createElement(SimpleTextarea::TAG_NAME);
         $elemento->setAttribute('id', $id);
-        return new SimpleTextarea($elemento, $Body->DOM);
+        return new SimpleTextarea($elemento);
     }
     
     

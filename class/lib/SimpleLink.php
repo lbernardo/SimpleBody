@@ -21,7 +21,7 @@ class SimpleLink extends Widget{
     public static function CreateElement($id = null,$Body = null){
         $elemento = $Body->DOM->createElement(SimpleLink::TAG_NAME);
         $elemento->setAttribute('id',$id);
-        return new SimpleLink($elemento,$Body->DOM);
+        return new SimpleLink($elemento);
     }
 
     

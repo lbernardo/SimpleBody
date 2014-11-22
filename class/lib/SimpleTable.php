@@ -21,7 +21,7 @@ class SimpleTable extends Widget{
     public static function CreateElement($id = null,$Body = null){
         $elemento = $Body->DOM->createElement(SimpleTable::TAG_NAME);
         $elemento->setAttribute('id',$id);
-        return new SimpleTable($elemento,$Body->DOM);
+        return new SimpleTable($elemento);
     }
     
     /**

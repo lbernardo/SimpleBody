@@ -37,7 +37,7 @@ class SimpleText extends Widget {
     public static function CreateElement($id = null, $tag = SimpleText::TAG_PARAG, $Body = null) {
         $elemento = $Body->DOM->createElement($tag);
         $elemento->setAttribute('id', $id);
-        return new SimpleText($elemento, $Body->DOM);
+        return new SimpleText($elemento);
     }
     
     /**

@@ -10,12 +10,23 @@ class SimpleButton extends Widget{
     const SUBMIT = 'submit';
     const RESET = 'reset';
     
+    const TAG_NAME ='button';
     
     public function SimpleButton($element){
         $this->DOM_ELEMENT = $element;
         $this->DOM = $element->ownerDocument;
     }
     
+    /**
+     * Cria Widget::SimpleButton do elemento a partir da classe
+     * @param string $id Id do novo elemento
+     * @return Widget::SimpleButton Widget::SimpleButton do elemento
+     */
+    public static function CreateElement($id = null,$Body = null){
+        $elemento = $Body->DOM->createElement(SimpleButton::TAG_NAME);
+        $elemento->setAttribute('id',$id);
+        return new SimpleImage($elemento);
+    }
     
     /**
      * Retorna tipo do Botão

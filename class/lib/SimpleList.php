@@ -22,7 +22,7 @@ class SimpleList extends Widget {
     public static function CreateElement($id = null, $Body = null) {
         $elemento = $Body->DOM->createElement(SimpleList::TAG_NAME);
         $elemento->setAttribute('id', $id);
-        return new SimpleList($elemento, $Body->DOM);
+        return new SimpleList($elemento);
     }
     
     /**

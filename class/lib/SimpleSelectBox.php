@@ -22,7 +22,7 @@ class SimpleSelectBox extends Widget {
     public static function CreateElement($id = null,$Body = null){  
         $elemento = $Body->DOM->createElement(SimpleSelectBox::TAG_NAME);
         $elemento->setAttribute("id",$id);      
-        return new SimpleSelectBox($elemento,$Body->DOM);
+        return new SimpleSelectBox($elemento);
     }
     
     /**

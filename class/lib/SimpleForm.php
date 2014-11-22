@@ -33,7 +33,7 @@ class SimpleForm extends Widget{
     public static function CreateElement($id = null,$Body = null){
         $elemento = $Body->DOM->createElement(SimpleForm::TAG_NAME);
         $elemento->setAttribute('id',$id);
-        return new SimpleForm($elemento,$Body->DOM);
+        return new SimpleForm($elemento);
     }
     
     /**

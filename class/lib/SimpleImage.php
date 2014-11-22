@@ -6,9 +6,22 @@
  */
 class SimpleImage extends Widget{
     
-    public function SimpleForm($element) {
+    const TAG_NAME ='img';
+    
+    public function SimpleImage($element) {
         $this->DOM_ELEMENT = $element;
         $this->DOM = $element->ownerDocument;
+    }
+    
+    /**
+     * Cria Widget::SimpleImage do elemento a partir da classe
+     * @param string $id Id do novo elemento
+     * @return Widget::SimpleImage Widget::SimpleImage do elemento
+     */
+    public static function CreateElement($id = null,$Body = null){
+        $elemento = $Body->DOM->createElement(SimpleImage::TAG_NAME);
+        $elemento->setAttribute('id',$id);
+        return new SimpleImage($elemento);
     }
     
     /**

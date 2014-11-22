@@ -26,7 +26,7 @@ class SimpleInput extends Widget{
     public static function CreateElement($id = null,$Body = null){
         $elemento = $Body->DOM->createElement(SimpleInput::TAG_NAME);
         $elemento->setAttribute('id',$id);
-        return new SimpleInput($elemento,$Body->DOM);
+        return new SimpleInput($elemento);
     }
     
     /**

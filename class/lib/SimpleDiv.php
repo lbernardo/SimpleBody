@@ -23,7 +23,7 @@ class SimpleDiv extends Widget {
     public static function CreateElement($id = null,$Body = null){
         $elemento = $Body->DOM->createElement(SimpleDiv::TAG_NAME);
         $elemento->setAttribute('id',$id);
-        return new SimpleDiv($elemento,$Body->DOM);
+        return new SimpleDiv($elemento);
     }
     
     
