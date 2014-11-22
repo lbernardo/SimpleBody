@@ -32,12 +32,13 @@ class SimpleText extends Widget {
 
     /**
      * Cria Widget::SimpleText do elemento a partir da classe
-     * @param string $id Id do novo elemento
+     * @param string $text Texto do elemento
+     * @param string $tag Simpletext::tag_... Tipo de tag
+     * @param SimpleBody $Body
      * @return Widget::SimpleText Widget::SimpleText do elemento
      */
-    public static function CreateElement($id = null, $tag = SimpleText::TAG_PARAG, $Body = null) {
-        $elemento = $Body->DOM->createElement($tag);
-        $elemento->setAttribute('id', $id);
+    public static function CreateElement($text = null, $tag, $Body) {
+        $elemento = $Body->DOM->createElement($tag,$text);        
         return new SimpleText($elemento);
     }
     
