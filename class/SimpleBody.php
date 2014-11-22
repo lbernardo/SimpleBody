@@ -95,6 +95,12 @@ class SimpleBody {
             case 'em':
             case 'sup':
             case 'span':
+            case 'h1':
+            case 'h2':
+            case 'h3':
+            case 'h4':
+            case 'h5':
+            case 'h6':
                 return SimpleText($ele);
             break;
             // Default

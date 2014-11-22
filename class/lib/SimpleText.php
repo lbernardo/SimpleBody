@@ -17,6 +17,12 @@ class SimpleText extends Widget {
     const TAG_EMPHA = 'em';
     const TAG_SUB = 'sub';
     const TAG_SPAN = 'span';
+    const TAG_H1 = 'h1';
+    const TAG_H2 = 'h2';
+    const TAG_H3 = 'h3';
+    const TAG_H4 = 'h4';
+    const TAG_H5 = 'h5';
+    const TAG_H6 = 'h6';
 
     public function SimpleText($element) {
         $this->DOM_ELEMENT = $element;
