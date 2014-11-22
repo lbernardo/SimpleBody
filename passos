@@ -1,7 +1,6 @@
 Criar:
     class/lib/SimpleRadioGroup => Grupo de Radios (input[type='radio'])
-    class/lib/SimpleHeading => Cabeçalhos (H1,H2,... Hn)
-    class/lib/SimpleText => Textos (b,i,sub,strong,em,sup,p,span)    
+    class/lib/SimpleTextArea => Textarea  
     
 Modificar:
     class/SimpleBody
