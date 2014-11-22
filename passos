@@ -1,11 +1,9 @@
 Criar:
-    class/lib/SimpleRadioGroup => Grupo de Radios (input[type='radio'])
-    class/lib/SimpleTextArea => Textarea  
-    
+    class/lib/SimpleRadioGroup => Grupo de Radios (input[type='radio'])    
 Modificar:
     class/SimpleBody
         * Carregar vários elementos ao mesmo tempo com a sua classe
-    class/lib/SimpleInput class/lib/SimpleSelectBox
+    class/lib/SimpleInput class/lib/SimpleSelectBox class/lib/SimpleTextarea
         * Criar método para inserir label's ou elementos de labels
 
 Possíveis:
