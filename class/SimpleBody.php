@@ -205,11 +205,17 @@ class SimpleBody {
         $head = $head->item(0);
         return $head;
     }
-    
-    public function getModels($model = null){
-        $tmp = new DOMDocument;
-        $tmp->load($this->PATH_MODELS."/".$model);
-        $this->DOM->importNode($tmp);
+   
+    /**
+     * Método para cria elemento a partir de uma tag
+     * @param string $tag Tag name 
+     * @return Widget de elemento por tag 
+     */
+    public function createElementByTag($tag = null){
+        // Cria elmento
+        $elemento = $this->DOM->createElement($tag);
+        // Cria elemento para widget
+        return new Widget($elemento);
     }
     
     
