@@ -87,6 +87,10 @@ class SimpleBody {
             case 'ol':
                 return new SimpleList($ele);
             break;
+            // TextArea
+            case 'textarea':
+                return new SimpleTextarea($ele);
+            break;
             // Texto
             case 'span':
             case 'strong':
