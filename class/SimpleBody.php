@@ -74,6 +74,10 @@ class SimpleBody {
             case 'table':
                 return new SimpleTable($ele);
             break;
+            case 'ul':
+            case 'ol':
+                return new SimpleList($ele);
+            break;
             default :
                 return new Widget($ele);
         }
