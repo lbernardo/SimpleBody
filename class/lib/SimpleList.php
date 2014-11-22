@@ -7,7 +7,7 @@
  */
 class SimpleList extends Widget {
 
-    const TAG_NAME = '';
+    const TAG_NAME = 'ul';
 
     public function SimpleList($element) {
         $this->DOM_ELEMENT = $element;
