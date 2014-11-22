@@ -12,6 +12,7 @@ class SimpleInput extends Widget{
     const PASS = 'password';
     const CHECK = 'checkbox';
     const FILE = 'file';
+    const RADIO = 'radio';
     
     public function SimpleInput($element) {
         $this->DOM_ELEMENT = $element;
