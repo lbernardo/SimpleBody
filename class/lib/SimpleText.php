@@ -23,6 +23,7 @@ class SimpleText extends Widget {
     const TAG_H4 = 'h4';
     const TAG_H5 = 'h5';
     const TAG_H6 = 'h6';
+    const TAG_LEGEND = 'legend';
 
     public function SimpleText($element) {
         $this->DOM_ELEMENT = $element;

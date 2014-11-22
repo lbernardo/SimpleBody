@@ -105,6 +105,7 @@ class SimpleBody {
             case 'h4':
             case 'h5':
             case 'h6':
+            case 'legend':
                 return SimpleText($ele);
             break;
             // Default
