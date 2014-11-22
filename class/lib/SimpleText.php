@@ -9,6 +9,14 @@ class SimpleText extends Widget {
 
     // Tag name
     var $TAG_NAME = 'p';
+    
+    const TAG_PARAG = 'p';
+    const TAG_BOLD = 'b';
+    const TAG_STRONG = 'strong';
+    const TAG_SUPER = 'sup';
+    const TAG_EMPHA = 'em';
+    const TAG_SUB = 'sub';
+    const TAG_SPAN = 'span';
 
     public function SimpleText($element) {
         $this->DOM_ELEMENT = $element;
@@ -20,8 +28,8 @@ class SimpleText extends Widget {
      * @param string $id Id do novo elemento
      * @return Widget::SimpleText Widget::SimpleText do elemento
      */
-    public static function CreateElement($id = null, $Body = null) {
-        $elemento = $Body->DOM->createElement($this->TAG_NAME);
+    public static function CreateElement($id = null, $tag = SimpleText::TAG_PARAG, $Body = null) {
+        $elemento = $Body->DOM->createElement($tag);
         $elemento->setAttribute('id', $id);
         return new SimpleText($elemento, $Body->DOM);
     }
@@ -33,8 +41,6 @@ class SimpleText extends Widget {
     public function getText(){
        return $this->getHTML();
     }
-    
-    
     /**
      * Seta novo texto no documento
      * @param string $str Texto
@@ -42,7 +48,4 @@ class SimpleText extends Widget {
     public function setText($str = null){
         $this->setHTML($str);
     }
-    
-    
-
 }
