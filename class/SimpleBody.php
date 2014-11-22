@@ -50,34 +50,54 @@ class SimpleBody {
         $ele = $this->DOM->getElementById($id);
         
         switch ($ele->tagName){
+            // Input
             case 'input':
                 return new SimpleInput($ele);
             break;
+            // Formulario
             case 'form':
                 return new SimpleForm($ele);
             break;
+            // Link
             case 'a':
                 return new SimpleLink($ele);
             break;
+            // Select Box
             case 'select':
                 return new SimpleSelectBox($ele);
             break;
+            // DIV
             case 'div':
                 return new SimpleDiv($ele);
             break;
+            // Imagem    
             case 'img':
                 return new SimpleImage($ele);
             break;
+            // Botão
             case 'button':
                 return new SimpleButton($ele);
             break;
+            // Tabela
             case 'table':
                 return new SimpleTable($ele);
             break;
+            // Lista
             case 'ul':
             case 'ol':
                 return new SimpleList($ele);
             break;
+            // Texto
+            case 'span':
+            case 'strong':
+            case 'b':
+            case 'i':
+            case 'em':
+            case 'sup':
+            case 'span':
+                return SimpleText($ele);
+            break;
+            // Default
             default :
                 return new Widget($ele);
         }
