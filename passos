@@ -1,5 +1,3 @@
-Criar:
-    class/lib/SimpleRadioGroup => Grupo de Radios (input[type='radio'])    
 Modificar:
     class/SimpleBody
         * Carregar vários elementos ao mesmo tempo com a sua classe
