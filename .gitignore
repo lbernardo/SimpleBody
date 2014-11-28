@@ -1,4 +1,4 @@
 tests/*
-class/templates/*
-class/templates_c/*
-class/models/*
+class/templates/*.html
+class/templates_c/*.html
+class/models/*.html
