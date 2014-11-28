@@ -1,0 +1,4 @@
+tests/*
+class/templates/*
+class/templates_c/*
+class/models/*
