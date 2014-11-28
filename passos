@@ -5,7 +5,6 @@ Modificar:
         * Criar método para inserir label's ou elementos de labels
 
 Possíveis:
-    class/models => Cria Modelos
     class/app/sBootstrap => Criar application facilitador do uso do "Bootstrap Twitter 3" http://getboostrap.com/
     class/app/sFontIcon => Criar application facilitador do uso do "Font Awesome 4.2" http://fortawesome.github.io/ 
     class/app/sJquery => Criar application facilitador do uso do "jQuery 1.11.1" http://jquery.com
