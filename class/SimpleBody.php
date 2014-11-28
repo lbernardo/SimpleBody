@@ -240,7 +240,7 @@ class SimpleBody {
         $tmp->loadHTMLFile($this->PATH_MODELS."/".$model);
         $elemento = $tmp->getElementById($id);
         $elemento = $this->DOM->importNode($elemento,true);
-        return $elemento;
+        return new Widget($elemento);
     }
     
     
